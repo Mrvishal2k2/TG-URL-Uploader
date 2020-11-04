@@ -10,6 +10,8 @@ logger = logging.getLogger(__name__)
 
 import os
 import sqlite3
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
@@ -22,7 +24,6 @@ from translation import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from helper_funcs.chat_base import TRChatBase
 
