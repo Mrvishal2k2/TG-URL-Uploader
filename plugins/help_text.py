@@ -67,6 +67,9 @@ async def start(bot, update):
       button = [[
                 InlineKeyboardButton("ABOUT😇", callback_data="about"),
                 InlineKeyboardButton("HELP", callback_data="help"),
+                ],
+                [
+                InlineKeyboardButton("CLOSE🤐", callback_data="closeme"),
                 ]]
       markup = InlineKeyboardMarkup(button)
     # logger.info(update)
