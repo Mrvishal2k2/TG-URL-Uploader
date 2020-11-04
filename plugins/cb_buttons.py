@@ -52,12 +52,15 @@ async def button(bot, update):
     # logger.info(update)
     cb_data = update.data
     if "about" in cb_data:
-      await m.message.delete()
-      await c.send_message(chat_id=update.message.chat.id, text=Translation.ABOUT, disable_web_page_preview=True)
+      await update.message.delete()
+      await bot.send_message(chat_id=update.message.chat.id, text=Translation.ABOUT, disable_web_page_preview=True)
 
     if "help" in cb_data:
-      await m.message.delete()
-      await c.send_message(chat_id=update.message.chat.id, text=Translation.HELP_USER, disable_web_page_preview=True)
+      await update.message.delete()
+      await bot.send_message(chat_id=update.message.chat.id, text=Translation.HELP_USER, disable_web_page_preview=True)
+
+    if "closeme" in cb_data:
+      await update.message.delete()
 
     if ":" in cb_data:
         # unzip formats
