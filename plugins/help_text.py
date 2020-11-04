@@ -65,16 +65,16 @@ async def get_me_info(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
 async def start(bot, update):
-      button = [[
-                InlineKeyboardButton("ABOUT😇", callback_data="about"),
-                InlineKeyboardButton("HELP", callback_data="help"),
-                ],
-                [
-                InlineKeyboardButton("CLOSE🤐", callback_data="closeme"),
-               ]]
-      markup = InlineKeyboardMarkup(button)
-    # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/start")
+    button = [[
+               InlineKeyboardButton("ABOUT😇", callback_data="about"),
+               InlineKeyboardButton("HELP", callback_data="help"),
+              ],
+              [
+               InlineKeyboardButton("CLOSE🤐", callback_data="closeme"),
+             ]]
+    markup = InlineKeyboardMarkup(button)
+    # logger.info(update)
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.START_TEXT,
