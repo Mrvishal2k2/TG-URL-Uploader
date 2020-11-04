@@ -14,7 +14,7 @@ import os
 import shutil
 import subprocess
 import time
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.client.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
