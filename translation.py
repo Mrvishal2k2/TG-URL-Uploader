@@ -6,7 +6,7 @@ This is a Telegram URL Upload Bot!
 
 /help for more details..
 
-Support Group : @KCHDMOVIES2019"""
+Support Group : @BotDunia"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "No more Plans at this moment!!"
@@ -48,7 +48,12 @@ Expires on: Lifetime"""
 --------
 Send /me to know current plan details
 
-© @KCHDMOVIES2019"""
+© @BotDunia"""
+    ABOUT = """ Naav Gotalla Vishal Anta 😂
+Worlds Best person 👱 
+Yes adu naane 😂🤣
+Testing about function handlers 
+Did it work 🤔""" 
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
     REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
     REPLY_TO_DOC_FOR_SCSS = "Reply to a Telegram media to get screenshots"
