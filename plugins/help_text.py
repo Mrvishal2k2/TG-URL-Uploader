@@ -71,7 +71,7 @@ async def start(bot, update):
                 ],
                 [
                 InlineKeyboardButton("CLOSE🤐", callback_data="closeme"),
-                ]]
+               ]]
       markup = InlineKeyboardMarkup(button)
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/start")
