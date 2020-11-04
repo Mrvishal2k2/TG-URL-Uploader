@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 import os
 import sqlite3
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.client.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 # the secret configuration specific things
