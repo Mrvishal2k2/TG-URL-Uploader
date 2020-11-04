@@ -35,6 +35,7 @@ from plugins.youtube_dl_button import youtube_dl_call_back
 from plugins.dl_button import ddl_call_back
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
+from help_text import start
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 
