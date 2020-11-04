@@ -54,6 +54,9 @@ async def button(bot, update):
       await m.message.delete()
       await c.send_message(chat_id=update.message.chat.id, text=Translation.ABOUT, disable_web_page_preview=True)
 
+    if "help" in cb_data:
+      await m.message.delete()
+      await c.send_message(chat_id=update.message.chat.id, text=Translation.HELP_USER, disable_web_page_preview=True)
 
     if ":" in cb_data:
         # unzip formats
