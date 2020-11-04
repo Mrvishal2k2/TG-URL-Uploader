@@ -27,6 +27,8 @@ from translation import Translation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
 from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 from plugins.youtube_dl_button import youtube_dl_call_back
@@ -48,6 +50,11 @@ async def button(bot, update):
         return
     # logger.info(update)
     cb_data = update.data
+    if "about" in cb_data:
+      await m.message.delete()
+      await c.send_message(chat_id=update.message.chat.id, text=Translation.ABOUT, disable_web_page_preview=True)
+
+
     if ":" in cb_data:
         # unzip formats
         extract_dir_path = Config.DOWNLOAD_LOCATION + \
