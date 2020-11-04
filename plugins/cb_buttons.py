@@ -14,6 +14,7 @@ import os
 import shutil
 import subprocess
 import time
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
@@ -25,8 +26,6 @@ else:
 from translation import Translation
 
 import pyrogram
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
