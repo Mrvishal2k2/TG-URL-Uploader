@@ -113,7 +113,7 @@ async def youtube_dl_call_back(bot, update):
     command_to_exec = []
     if tg_send_type == "audio":
         command_to_exec = [
-            "youtube-dl",
+            "youtube-dlc",
             "-c",
             "--max-filesize", str(Config.TG_MAX_FILE_SIZE),
             "--prefer-ffmpeg",
@@ -124,12 +124,12 @@ async def youtube_dl_call_back(bot, update):
             "-o", download_directory
         ]
     else:
-        # command_to_exec = ["youtube-dl", "-f", youtube_dl_format, "--hls-prefer-ffmpeg", "--recode-video", "mp4", "-k", youtube_dl_url, "-o", download_directory]
+        # command_to_exec = ["youtube-dlc", "-f", youtube_dl_format, "--hls-prefer-ffmpeg", "--recode-video", "mp4", "-k", youtube_dl_url, "-o", download_directory]
         minus_f_format = youtube_dl_format
         if "youtu" in youtube_dl_url:
             minus_f_format = youtube_dl_format + "+bestaudio"
         command_to_exec = [
-            "youtube-dl",
+            "youtube-dlc",
             "-c",
             "--max-filesize", str(Config.TG_MAX_FILE_SIZE),
             "--embed-subs",
@@ -323,7 +323,7 @@ async def youtube_dl_call_back(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @TGBotsZ"
+                caption = "© @Botdunia"
                 if is_w_f:
                     caption = "/upgrade to Plan D to remove the watermark\n© @AnyDLBot"
                 for image in images:
